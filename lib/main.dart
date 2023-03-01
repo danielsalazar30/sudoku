@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -66,20 +68,21 @@ class _SudokuPageState extends State<SudokuPage> {
                 }),
               ),
             ),
-            // Container(
-            //   padding: EdgeInsets.all(16.0),
-            //   child: RaisedButton(
-            //     onPressed: () {
-            //       // You could implement a solve function here to solve the sudoku
-            //     },
-            //     child: Text(
-            //       'Solve',
-            //       style: TextStyle(
-            //         fontSize: 20.0,
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            Container(
+              padding: EdgeInsets.all(16.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  log(sudoku.toString());
+                  // You could implement a solve function here to solve the sudoku
+                },
+                child: const Text(
+                  "Solve",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
