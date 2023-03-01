@@ -72,8 +72,27 @@ class _SudokuPageState extends State<SudokuPage> {
               padding: EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: () {
-                  log(sudoku.toString());
-                  // You could implement a solve function here to solve the sudoku
+                  var position = [4, 5];
+                  List<int> horizontalLine = [];
+                  List<int> verticalLine = [];
+                  for (var i = 0; i < sudoku.length; i++) {
+                    // log(sudoku[i].toString());
+                    if (i == position[0]) {
+                      horizontalLine.addAll(sudoku[i]);
+                    }
+                    // if (i == position[1]) {
+                    // log("Validacion linea vertical");
+                    verticalLine.add(sudoku[i][position[1]]);
+                    // }
+                  }
+                  log("Linea horizontal");
+                  log(horizontalLine.toString());
+                  log("Linea Vertical");
+                  log(verticalLine.toString());
+                  // for (var i = 0; i < sudoku.length; i++) {
+                  //   log(sudoku[i].toString());
+                  //   log(sudoku[i].toString());
+                  // }
                 },
                 child: const Text(
                   "Solve",
