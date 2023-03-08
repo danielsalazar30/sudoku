@@ -97,9 +97,11 @@ class _SudokuPageState extends State<SudokuPage> {
                         color: cellColor),
                     child: TextField(
                       controller: TextEditingController(
-                          text: sudoku[row][col] == 0
-                              ? ''
-                              : sudoku[row][col].toString()),
+                          text: sudoku.isNotEmpty
+                              ? sudoku[row][col] == 0
+                                  ? ''
+                                  : sudoku[row][col].toString()
+                              : ''),
                       style: const TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
