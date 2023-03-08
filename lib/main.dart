@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 
+import 'elevated-button.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -28,17 +30,6 @@ class SudokuPage extends StatefulWidget {
 }
 
 class _SudokuPageState extends State<SudokuPage> {
-  // List<List<int>> sudoku = [
-  //   [5, 3, 0, 0, 7, 0, 0, 0, 0],
-  //   [6, 0, 0, 1, 9, 5, 0, 0, 0],
-  //   [0, 9, 8, 0, 0, 0, 0, 6, 0],
-  //   [8, 0, 0, 0, 6, 0, 0, 0, 3],
-  //   [4, 0, 0, 8, 0, 3, 0, 0, 1],
-  //   [7, 0, 0, 0, 2, 0, 0, 0, 6],
-  //   [0, 6, 0, 0, 0, 0, 2, 8, 0],
-  //   [0, 0, 0, 4, 1, 9, 0, 0, 5],
-  //   [0, 0, 0, 0, 8, 0, 0, 7, 9]
-  // ];
   List<List<int>> sudoku = [];
   List<List<int>> sudokuSolved = [];
   List<List<List<int>>> sudokuGenerated = [];
@@ -103,7 +94,7 @@ class _SudokuPageState extends State<SudokuPage> {
                                   : sudoku[row][col].toString()
                               : ''),
                       style: const TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 14.0,
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
@@ -128,13 +119,95 @@ class _SudokuPageState extends State<SudokuPage> {
               ),
             ),
             Container(
+              padding: const EdgeInsets.all(4.0),
+              child: Wrap(
+                spacing: 2,
+                runSpacing: 2,
+                children: [
+                  const CustomElevatedButton(buttonText: "1"),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                        ),
+                      )),
+                ],
+              ),
+            ),
+            Container(
               padding: const EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: () {},
                 child: const Text(
                   "Solve",
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 14.0,
                   ),
                 ),
               ),
